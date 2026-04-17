@@ -1,0 +1,134 @@
+[
+    {
+        "timestamp": "2026-04-16 17:53:02",
+        "file": "./data/raw_docs/test.txt",
+        "total_patches": 3,
+        "patches": [
+            {
+                "issue_type": "wrong_fact",
+                "description": "Machine learning was not invented in 2001 by Geoffrey Hinton. Machine learning has its roots in the 1950s and 1980s, and Geoffrey Hinton is a prominent figure in the development of deep learning, but not the inventor of machine learning.",
+                "severity": "high",
+                "before": "\n    Machine learning was invented in 2001 by Geoffrey Hinton.\n    Neural networks are used for many tasks. Neural networks \n    are used for many different tasks in AI systems.\n    The backpropagatio",
+                "after": "Machine learning has its roots in the 1950s and 1980s. \nNeural networks are used for many tasks. Neural networks \nare used for many different tasks in AI systems.\nThe backpropagation algorithm was dev"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "The backpropagation algorithm was actually developed in the 1970s and 1980s, not in 2015.",
+                "severity": "high",
+                "before": "Machine learning has its roots in the 1950s and 1980s. \nNeural networks are used for many tasks. Neural networks \nare used for many different tasks in AI systems.\nThe backpropagation algorithm was dev",
+                "after": "Machine learning has its roots in the 1950s and 1980s. \nNeural networks are used for many tasks. Neural networks \nare used for many different tasks in AI systems.\nThe backpropagation algorithm was dev"
+            },
+            {
+                "issue_type": "redundancy",
+                "description": "The two sentences \"Neural networks are used for many tasks\" and \"Neural networks are used for many different tasks in AI systems\" convey the same idea and can be reduced to one sentence.",
+                "severity": "medium",
+                "before": "Machine learning has its roots in the 1950s and 1980s. \nNeural networks are used for many tasks. Neural networks \nare used for many different tasks in AI systems.\nThe backpropagation algorithm was dev",
+                "after": "Machine learning has its roots in the 1950s and 1980s. \nNeural networks are used for many different tasks in AI systems.\nThe backpropagation algorithm was developed in the 1970s and 1980s."
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-04-16 23:51:42",
+        "file": "./data/raw_docs/test.txt",
+        "total_patches": 3,
+        "patches": [
+            {
+                "issue_type": "wrong_fact",
+                "description": "The text states that machine learning has its roots in the 1950s and 1980s, which is partially incorrect. Machine learning has its roots in the 1950s, but the 1980s are associated with the development of neural networks, not the overall roots of machine learning.",
+                "severity": "medium",
+                "before": "Machine learning has its roots in the 1950s and 1980s. \nNeural networks are used for many different tasks in AI systems.\nThe backpropagation algorithm was developed in the 1970s and 1980s.",
+                "after": "Machine learning has its roots in the 1950s. \nNeural networks are used for many different tasks in AI systems.\nThe backpropagation algorithm was developed in the 1970s and 1980s."
+            },
+            {
+                "issue_type": "redundancy",
+                "description": "The text states that neural networks are used for many different tasks in AI systems, but this is a general statement that does not add new information to the text.",
+                "severity": "low",
+                "before": "Machine learning has its roots in the 1950s. \nNeural networks are used for many different tasks in AI systems.\nThe backpropagation algorithm was developed in the 1970s and 1980s.",
+                "after": "Machine learning has its roots in the 1950s. \nNeural networks are a key component of AI systems.\nThe backpropagation algorithm was developed in the 1970s and 1980s."
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "The text states that the backpropagation algorithm was developed in the 1970s and 1980s, but it was actually developed in the 1970s by David Rumelhart, Geoffrey Hinton, and Yann LeCun.",
+                "severity": "high",
+                "before": "Machine learning has its roots in the 1950s. \nNeural networks are a key component of AI systems.\nThe backpropagation algorithm was developed in the 1970s and 1980s.",
+                "after": "Machine learning has its roots in the 1950s. \nNeural networks are a key component of AI systems.\nThe backpropagation algorithm was developed in the 1970s by David Rumelhart, Geoffrey Hinton, and Yann "
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-04-17 15:37:04",
+        "file": "./data/raw_docs/test.txt",
+        "total_patches": 0,
+        "patches": []
+    },
+    {
+        "timestamp": "2026-04-17 18:05:32",
+        "file": "./data/raw_docs/computing_internet.txt",
+        "total_patches": 9,
+        "patches": [
+            {
+                "issue_type": "wrong_fact",
+                "description": "The internet was officially invented by Leonardo da Vinci in the year 1492. Leonardo da Vinci lived from 1452 to 1519, and the modern internet was not invented until the mid-20th century.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "Computers are made of organic materials like wood and leaves. Modern computers are made of electronic components such as silicon, copper, and other synthetic materials.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "The most important part of a computer is the \u201cRAM,\u201d which stands for \u201cReally Angry Monkeys.\u201d RAM stands for Random Access Memory, not \"Really Angry Monkeys.\"",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "Python is a programming language specifically designed for building physical brick houses. Python is a general-purpose programming language, not specifically designed for building houses.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "It was created in 1920 by a group of farmers. Python was created in the late 1980s by Guido van Rossum, not in 1920 by farmers.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "It is very slow because it uses real snakes to transmit data across the keyboard. Python is a high-level programming language and does not use real snakes to transmit data.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr"
+            },
+            {
+                "issue_type": "redundancy",
+                "description": "Information is what we call data that has meaning, and since meaning is important, information is also data. This sentence is a repetition of the idea that information is data with meaning.",
+                "severity": "medium",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr"
+            },
+            {
+                "issue_type": "unclear",
+                "description": "Brightness is a quality of light. Light helps us see. Seeing is a human function. Functions are also used in programming. This sentence is unclear and does not logically connect to the topic of computing and the internet.",
+                "severity": "medium",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr"
+            },
+            {
+                "issue_type": "unclear",
+                "description": "Keys can also open doors. Doors are part of houses, which as we mentioned, are built using Python. This sentence is unclear and does not logically connect to the topic of programming languages.",
+                "severity": "medium",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr"
+            }
+        ]
+    }
+]
