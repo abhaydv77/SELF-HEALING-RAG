@@ -21,7 +21,7 @@ Rules:
 
 def write_patch(original_text,issue):
     prompt = PATCH_PROMPT.format(
-        original_text=original_text,
+        original_text=issue["text"], 
         issue_type=issue["issue_type"],
         description=issue["description"]
 
@@ -35,23 +35,34 @@ def write_patch(original_text,issue):
 
     fixed_text = response.choices[0].message.content.strip()
     print(f"FIXED TEXT FROM LLM:\n{fixed_text}\n")
-    return{
-        "original": original_text,
-        "fixed": fixed_text,
+    return {
+     "original": issue["text"],     
+        "fixed": fixed_text,           
         "issue_type": issue["issue_type"],
         "description": issue["description"],
         "severity": issue["severity"]
-    }
+}
 
 def generate_patches(original_text, issues):
     patches = []
     current_text = original_text
-    for issue in issues:
-        if issue.get("issues_found", False):
-          patch = write_patch(current_text, issue)
-          patches.append(patch)
-          current_text = patch["fixed"]  # Update current_text with the fixed text
-    return patches,current_text
+    
+    
+    valid_issues = [issue for issue in issues if issue.get("issues_found", False)]
+    
+    if not valid_issues:
+       
+        return [], original_text
+    
+    for issue in valid_issues:
+        patch = write_patch(current_text, issue)
+        patches.append(patch)
+        current_text = current_text.replace(
+            patch["original"],
+            patch["fixed"]
+        )
+    
+    return patches, current_text
 
 
 

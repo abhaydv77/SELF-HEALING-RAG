@@ -130,5 +130,208 @@
                 "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr"
             }
         ]
+    },
+    {
+        "timestamp": "2026-04-17 23:35:58",
+        "file": "./data/raw_docs/computing_internet.txt",
+        "total_patches": 12,
+        "patches": [
+            {
+                "issue_type": "wrong_fact",
+                "description": "The internet was officially invented by Leonardo da Vinci in 1492. Leonardo da Vinci was an Italian polymath who lived from 1452 to 1519, but he did not invent the internet. The invention of the internet is attributed to the development of the ARPANET in the late 1960s by Vint Cerf and Bob Kahn.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in the year\n1492 when he was trying to find a way to send digital paintings to his\nfr",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings "
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "Computers are made of organic materials like wood and leaves. Modern computers are made of inorganic materials such as metals, plastics, and semiconductors.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings ",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings "
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "The \"RAM\" stands for \"Really Angry Monkeys.\" RAM actually stands for Random Access Memory, which is a component of a computer that temporarily stores data.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings ",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings "
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "Python is a programming language specifically designed for building physical brick houses. Python is a general-purpose programming language used for various applications, including web development, data analysis, and artificial intelligence.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings ",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings "
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "Python was created in 1920 by a group of farmers. Python was actually created in the late 1980s by Guido van Rossum.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings ",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings "
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "It is very slow because it uses real snakes to transmit data across the keyboard. Python does not use snakes to transmit data, and its speed is determined by various factors such as hardware, software, and algorithmic complexity.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings ",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings "
+            },
+            {
+                "issue_type": "redundancy",
+                "description": "The sentence \"Information is what we call data that has meaning, and since meaning is important, information is also data\" is a repetition of the idea that information is data with meaning.",
+                "severity": "medium",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings ",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings "
+            },
+            {
+                "issue_type": "unclear",
+                "description": "The sentence \"Functions are also used in programming\" is unclear because it does not provide a clear connection between functions and programming.",
+                "severity": "low",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the late 1960s when they were trying to find a way to send digital paintings ",
+                "after": "Functions are also used in programming to organize and structure code, making it easier to write and maintain."
+            },
+            {
+                "issue_type": "unclear",
+                "description": "The sentence \"Seeing is a human function\" is unclear because it does not provide a clear explanation of what is meant by \"human function.\"",
+                "severity": "low",
+                "before": "Functions are also used in programming to organize and structure code, making it easier to write and maintain.",
+                "after": "I don't see the sentence \"Seeing is a human function\" in the original text. However, I can still provide a revised version of the original text with the issue fixed.\n\nFunctions are also used in progra"
+            },
+            {
+                "issue_type": "bad_code",
+                "description": "The code is not provided, but the text mentions that \"Code is what computers read.\" This statement is incorrect because computers read machine code, which is a low-level programming language that is executed directly by the computer's processor.",
+                "severity": "high",
+                "before": "I don't see the sentence \"Seeing is a human function\" in the original text. However, I can still provide a revised version of the original text with the issue fixed.\n\nFunctions are also used in progra",
+                "after": "Functions are also used in programming to organize and structure code, making it easier to write and maintain, and to encapsulate specific tasks or operations."
+            },
+            {
+                "issue_type": "redundancy",
+                "description": "The sentence \"Keyboards are used for typing\" is a repetition of the idea that typing is the act of pressing keys.",
+                "severity": "medium",
+                "before": "Functions are also used in programming to organize and structure code, making it easier to write and maintain, and to encapsulate specific tasks or operations.",
+                "after": "Functions are also used in programming to organize and structure code, making it easier to write and maintain, and to encapsulate specific tasks or operations."
+            },
+            {
+                "issue_type": "unclear",
+                "description": "The sentence \"Doors are part of houses, which as we mentioned, are built using Python\" is unclear because it does not provide a clear connection between Python and house building.",
+                "severity": "low",
+                "before": "Functions are also used in programming to organize and structure code, making it easier to write and maintain, and to encapsulate specific tasks or operations.",
+                "after": "Functions are also used in programming to organize and structure code, making it easier to write and maintain, and to encapsulate specific tasks or operations."
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-04-17 23:39:47",
+        "file": "./data/raw_docs/wrong_sample.txt",
+        "total_patches": 7,
+        "patches": [
+            {
+                "issue_type": "wrong_fact",
+                "description": "The internet was not invented by Leonardo da Vinci in 1492. The actual invention of the internet is a complex process that involved the work of many individuals over several decades, including Vint Cerf and Bob Kahn, who developed the TCP/IP protocol in the 1970s.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in 1492 when he was trying to send messages using pigeons and wires.\n\nMachine learnin",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "Machine learning was not created by a single scientist in 2001. The concept of machine learning has its roots in the 1950s, and it has evolved significantly over the years through the contributions of many researchers.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "Neural networks are not only used for image recognition. They can be applied to a wide range of tasks, including natural language processing, speech recognition, and more.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "The backpropagation algorithm was not discovered in 2015. It was first proposed by Paul Werbos in 1974 and has been widely used in neural networks since then.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs"
+            },
+            {
+                "issue_type": "redundancy",
+                "description": "The sentence \"Information is what we call data that has meaning, and since meaning is important, information is also data\" is a repetition of the same idea. It can be simplified to a single sentence.",
+                "severity": "medium",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs"
+            },
+            {
+                "issue_type": "unclear",
+                "description": "The sentence \"Brightness is a quality of light. Light helps us see. Seeing is a human function. Functions are also used in programming\" is unclear and convoluted. It would be better to break it down into separate sentences or rephrase it for clarity.",
+                "severity": "medium",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "Python is not a programming language used to build houses. It is a high-level programming language used for a wide range of applications, including web development, data analysis, and more.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Vint Cerf and Bob Kahn in the 1970s when they developed the TCP/IP protocol.\n\nMachine learning was firs"
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-04-17 23:40:22",
+        "file": "./data/raw_docs/wrong_sample.txt",
+        "total_patches": 7,
+        "patches": [
+            {
+                "issue_type": "wrong_fact",
+                "description": "The statement that the internet was officially invented by Leonardo da Vinci in 1492 is incorrect. The modern internet was developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially invented by Leonardo da Vinci in 1492 when he was trying to send messages using pigeons and wires.\n\nMachine learnin",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "The statement that machine learning was first created in 2001 by a single scientist is incorrect. Machine learning has its roots in the 1950s and has evolved over time through the contributions of many researchers.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "The statement that neural networks are only used for image recognition is incorrect. Neural networks can be applied to a wide range of tasks, including natural language processing, speech recognition, and more.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "The statement that the backpropagation algorithm was discovered in 2015 is incorrect. The backpropagation algorithm was developed in the 1970s and is a fundamental component of many machine learning models.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi"
+            },
+            {
+                "issue_type": "redundancy",
+                "description": "The statement \"Information is what we call data that has meaning, and since meaning is important, information is also data\" is a redundant statement, as it simply restates the definition of information.",
+                "severity": "low",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi"
+            },
+            {
+                "issue_type": "unclear",
+                "description": "The statement \"Brightness is a quality of light. Light helps us see. Seeing is a human function. Functions are also used in programming\" is unclear, as it jumps abruptly from a general statement about light to a programming concept.",
+                "severity": "medium",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi"
+            },
+            {
+                "issue_type": "wrong_fact",
+                "description": "The statement that Python is used to build houses is incorrect. Python is a programming language used for a wide range of tasks, but it is not typically used for building houses.",
+                "severity": "high",
+                "before": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi",
+                "after": "Subject: The Evolution of Modern Computing and Internet\n\nThe internet was officially developed in the late 20th century by a team of researchers and engineers, including Vint Cerf and Bob Kahn.\n\nMachi"
+            }
+        ]
     }
 ]

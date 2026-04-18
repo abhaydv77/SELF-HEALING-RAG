@@ -17,7 +17,7 @@ def home():
 @app.post("/heal/")
 async def heal_file(file: UploadFile = File(...)):
     content = await file.read()
-    text = content.decode("utf-8")
+    text = content.decode("utf-8")[:1000]
 
     issues = analyse_chunk(text)
     patches, fixed_text = generate_patches(text, issues)
@@ -26,7 +26,7 @@ async def heal_file(file: UploadFile = File(...)):
     file_path = f"./data/raw_docs/{file.filename}"
     
     with open(file_path, "w", encoding="utf-8") as f:
-        f.write(text)
+        f.write(fixed_text)
 
     apply_patches(
     file_path=file_path, 
@@ -36,8 +36,11 @@ async def heal_file(file: UploadFile = File(...)):
 )
 
     return JSONResponse({
-        "original": text,
-        "fixed": fixed_text,
-        "patches": patches,
-        "total": len(patches)
-    })
+    "original": text,
+    "fixed": fixed_text,
+    "patches": patches, 
+    "total": len(patches),
+
+   
+})
+

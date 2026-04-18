@@ -36,7 +36,7 @@ def analyse_chunk(chunk_text):
 
 
 def parse_analysis(raw_text):
-    # \n\n se alag alag blocks banao
+    
     blocks = raw_text.strip().split('\n\n')
     
     issues = []
@@ -53,7 +53,8 @@ def parse_analysis(raw_text):
                 "issues_found": True,
                 "issue_type": current.get('ISSUE_TYPE', 'none'),
                 "description": current.get('DESCRIPTION', ''),
-                "severity": current.get('SEVERITY', 'low')
+                "severity": current.get('SEVERITY', 'low'),
+                "text": current.get('TEXT', '')
             })
     
     if not issues:
@@ -61,7 +62,8 @@ def parse_analysis(raw_text):
             "issues_found": False,
             "issue_type": "none",
             "description": "",
-            "severity": "low"
+            "severity": "low",
+            "text": ""
         }]
     
     return issues
