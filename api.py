@@ -17,7 +17,7 @@ def home():
 @app.post("/heal/")
 async def heal_file(file: UploadFile = File(...)):
     content = await file.read()
-    text = content.decode("utf-8")[:1000]
+    text = content.decode("utf-8")[:100]
 
     issues = analyse_chunk(text)
     patches, fixed_text = generate_patches(text, issues)
@@ -43,4 +43,15 @@ async def heal_file(file: UploadFile = File(...)):
 
    
 })
+from pydantic import BaseModel
+
+class ChatRequest(BaseModel):
+    query: str
+
+@app.post("/chat/")
+async def chat(req: ChatRequest):
+    from src.chatbot import chat_and_heal
+    result = chat_and_heal(req.query)
+    print("CHAT RESULT:", result)
+    return JSONResponse(result)
 

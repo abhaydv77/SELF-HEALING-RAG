@@ -5,23 +5,14 @@ from dotenv import load_dotenv
 load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-ANALYSIS_PROMPT = """You are a document quality analyser. 
-Analyse the following text chunk and identify these issues:
-
-1. WRONG FACTS — any factually incorrect information
-2. REDUNDANCY — repeated ideas or unnecessary sentences  
-3. UNCLEAR WRITING — vague or overly complicated sentences
-4. BAD CODE — if code is present, check for poor practices
-
-Text to analyse:
+ANALYSIS_PROMPT = """Analyze this text for issues:
 {chunk_text}
 
-Respond in this exact format for EACH issue found:
+Respond with:
 ISSUES_FOUND: yes/no
 ISSUE_TYPE: wrong_fact/redundancy/unclear/bad_code/none
-DESCRIPTION: what exactly is wrong
-SEVERITY: high/medium/low
-"""
+DESCRIPTION: what is wrong
+SEVERITY: high/medium/low"""
 
 def analyse_chunk(chunk_text):
     prompt = ANALYSIS_PROMPT.format(chunk_text=chunk_text)
@@ -37,7 +28,7 @@ def analyse_chunk(chunk_text):
 
 def parse_analysis(raw_text):
     
-    blocks = raw_text.strip().split('\n\n')
+    blocks = raw_text.strip().split('---')
     
     issues = []
     
@@ -48,13 +39,13 @@ def parse_analysis(raw_text):
                 key, value = line.split(':', 1)
                 current[key.strip()] = value.strip()
         
-        if current.get('ISSUES_FOUND', 'no').lower() == 'yes':
+        if current.get('ISSUE_TYPE') and current.get('ISSUE_TYPE').lower() != 'none':
             issues.append({
                 "issues_found": True,
                 "issue_type": current.get('ISSUE_TYPE', 'none'),
                 "description": current.get('DESCRIPTION', ''),
                 "severity": current.get('SEVERITY', 'low'),
-                "text": current.get('TEXT', '')
+                "text": ""
             })
     
     if not issues:

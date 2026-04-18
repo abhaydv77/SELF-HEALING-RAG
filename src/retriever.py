@@ -31,10 +31,7 @@ if __name__ == "__main__":
     print("Retriever created successfully")
 
    
-# test query
-results = retriever.invoke("what is machine learning?")
-    
-for i, doc in enumerate(results):
-        print(f"\n--- Chunk {i+1} ---")
-        print(doc.page_content[:200])  
-        print(f"Source: {doc.metadata}")
+
+
+
+

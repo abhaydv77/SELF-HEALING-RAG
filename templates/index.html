@@ -516,8 +516,211 @@
   .sev-medium { color: var(--accent2); }
   .sev-low { color: var(--green); }
 
-  /* SCROLLBAR */
-  ::-webkit-scrollbar { width: 6px; }
+  /* CHAT */
+  .chat-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 72vh;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .chat-messages::-webkit-scrollbar { width: 4px; }
+  .chat-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .msg {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    animation: slideIn 0.25s ease forwards;
+  }
+
+  .msg.user { align-self: flex-end; align-items: flex-end; }
+  .msg.bot  { align-self: flex-start; align-items: flex-start; }
+
+  .msg-bubble {
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .msg.user .msg-bubble {
+    background: var(--accent);
+    color: white;
+    border-bottom-right-radius: 4px;
+  }
+
+  .msg.bot .msg-bubble {
+    background: #1a1a28;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-bottom-left-radius: 4px;
+  }
+
+  .msg-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  .heal-notice {
+    margin-top: 12px;
+    padding: 14px 16px;
+    background: rgba(249,115,22,0.06);
+    border: 1px solid rgba(249,115,22,0.2);
+    border-radius: 10px;
+    font-size: 12px;
+  }
+
+  .heal-notice-title {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent2);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .heal-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .heal-before {
+    padding: 8px 10px;
+    background: rgba(239,68,68,0.07);
+    border: 1px solid rgba(239,68,68,0.15);
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: #ef4444;
+  }
+
+  .heal-after {
+    padding: 8px 10px;
+    background: rgba(34,197,94,0.07);
+    border: 1px solid rgba(34,197,94,0.15);
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: #22c55e;
+  }
+
+  .heal-label {
+    font-size: 9px;
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+  }
+
+  .typing-indicator {
+    display: flex;
+    gap: 5px;
+    padding: 14px 18px;
+    background: #1a1a28;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    border-bottom-left-radius: 4px;
+    width: fit-content;
+  }
+
+  .typing-dot {
+    width: 7px; height: 7px;
+    background: var(--muted);
+    border-radius: 50%;
+    animation: typingBounce 1.2s ease infinite;
+  }
+
+  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes typingBounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-6px); opacity: 1; }
+  }
+
+  .chat-input-wrap {
+    padding: 16px 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .chat-input {
+    flex: 1;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .chat-input:focus { border-color: var(--accent); }
+  .chat-input::placeholder { color: var(--muted); }
+
+  .send-btn {
+    padding: 12px 20px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--mono);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+
+  .send-btn:hover { background: #6c5ce7; }
+  .send-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .chat-empty {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--muted);
+  }
+
+  .chat-empty-icon { font-size: 36px; opacity: 0.4; }
+  .chat-empty-text { font-family: var(--mono); font-size: 13px; }
+  .chat-suggestions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 8px; }
+
+  .suggestion {
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--mono);
+  }
+
+  .suggestion:hover { border-color: var(--accent); color: var(--accent); }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
@@ -586,6 +789,7 @@
   <div class="tabs">
     <button class="tab active" onclick="switchTab('heal')">⚡ Heal Document</button>
     <button class="tab" onclick="switchTab('history')">🕐 Healing History</button>
+    <button class="tab" onclick="switchTab('chat')">💬 Chat</button>
   </div>
 
   <!-- HEAL TAB -->
@@ -657,11 +861,104 @@
     </div>
   </div>
 
+  <!-- CHAT TAB -->
+  <div class="tab-content" id="tab-chat">
+    <div class="chat-wrap">
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-empty" id="chatEmpty">
+          <div class="chat-empty-icon">⚕</div>
+          <div class="chat-empty-text">Ask anything — I'll heal your docs as I answer</div>
+          <div class="chat-suggestions">
+            <div class="suggestion" onclick="sendSuggestion(this)">Who is Narendra Modi?</div>
+            <div class="suggestion" onclick="sendSuggestion(this)">What is machine learning?</div>
+            <div class="suggestion" onclick="sendSuggestion(this)">Explain neural networks</div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-wrap">
+        <input class="chat-input" id="chatInput" type="text"
+          placeholder="Ask a question about your documents..."
+          onkeydown="if(event.key==='Enter') sendChat()">
+        <button class="send-btn" id="sendBtn" onclick="sendChat()">SEND →</button>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <script>
   let selectedFile = null;
   let healingHistory = JSON.parse(localStorage.getItem('healHistory') || '[]');
+  let chatHistory = [];
+
+  function sendSuggestion(el) {
+    document.getElementById('chatInput').value = el.textContent;
+    sendChat();
+  }
+
+  function appendMsg(role, content, patches) {
+    const empty = document.getElementById('chatEmpty');
+    if (empty) empty.remove();
+    const messages = document.getElementById('chatMessages');
+    const msg = document.createElement('div');
+    msg.className = `msg ${role}`;
+    const label = role === 'user' ? 'YOU' : 'SELFHEAL RAG';
+    msg.innerHTML = `<div class="msg-label">${label}</div><div class="msg-bubble">${content}</div>`;
+    if (patches && patches.length > 0) {
+      const notice = document.createElement('div');
+      notice.className = 'heal-notice';
+      notice.innerHTML = `
+        <div class="heal-notice-title">⚡ ${patches.length} PATCH${patches.length>1?'ES':''} APPLIED TO YOUR DOCUMENT</div>
+        ${patches.map(p=>`
+          <div class="heal-row">
+            <div class="heal-before"><span class="heal-label">WRONG (${p.issue_type})</span>${(p.original||p.before||'').substring(0,120)}...</div>
+            <div class="heal-after"><span class="heal-label">FIXED</span>${(p.fixed||p.after||'').substring(0,120)}...</div>
+          </div>`).join('')}`;
+      msg.appendChild(notice);
+    }
+    messages.appendChild(msg);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function showTyping() {
+    const messages = document.getElementById('chatMessages');
+    const typing = document.createElement('div');
+    typing.className = 'msg bot'; typing.id = 'typingIndicator';
+    typing.innerHTML = `<div class="msg-label">SELFHEAL RAG</div><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>`;
+    messages.appendChild(typing);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function removeTyping() {
+    const t = document.getElementById('typingIndicator');
+    if (t) t.remove();
+  }
+
+  async function sendChat() {
+    const input = document.getElementById('chatInput');
+    const query = input.value.trim();
+    if (!query) return;
+    input.value = '';
+    document.getElementById('sendBtn').disabled = true;
+    appendMsg('user', query);
+    showTyping();
+    try {
+      const res = await fetch('/chat/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query })
+      });
+      const data = await res.json();
+      removeTyping();
+      appendMsg('bot', data.answer, data.healed ? data.patches : []);
+    } catch (err) {
+      removeTyping();
+      appendMsg('bot', 'Something went wrong. Check the server.');
+      console.error(err);
+    }
+    document.getElementById('sendBtn').disabled = false;
+    input.focus();
+  }
 
   function switchTab(tab) {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
